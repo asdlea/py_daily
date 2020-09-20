@@ -1,5 +1,5 @@
 # Daily Coding Problem
 
-Personal (public) repository to keep track of the daily problems provided by <https://www.dailycodingproblem.com/>
+Personal (public) repository to keep my solutions of daily problems provided by <https://www.dailycodingproblem.com/>
 
-Feel free to comment if you have a suggestion or a better solution for a problem
+Feel free to leave a comment (or submit a MR) if you have a suggestion or a better solution for a problem
