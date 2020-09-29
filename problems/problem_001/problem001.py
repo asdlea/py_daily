@@ -5,16 +5,13 @@ def my_func(k: int, lst: List) -> bool:
     """Type and value checking intentionally left out,
     for the sake of simplicity"""
 
-    p_k = int(k)
-    p_lst = [int(x) for x in lst.split(',')]
-
-    if not len(p_lst) > 0:
+    if not len(lst) > 0:
         raise ValueError("Parameter 'lst' must have at least 2 elements")
 
     try:
-        for x in p_lst:
-            for y in p_lst[1:]:
-                if x+y == p_k:
+        for x in lst:
+            for y in lst[1:]:
+                if x+y == k:
                     return True
         return False
     except Exception as e:
@@ -22,4 +19,10 @@ def my_func(k: int, lst: List) -> bool:
 
 
 if __name__ == "__main__":
-    print(my_func(input("k:"), input("lst (comma separated numbers):")))
+    try:
+        print(my_func(
+            int(input("k:")),
+            [int(x) for x in
+                input("lst (comma separated numbers):").split(',')]))
+    except Exception as e:
+        print(e)
